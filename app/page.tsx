@@ -1,12 +1,17 @@
-import { Hero } from '@components'
-import React from 'react'
+import {Hero } from "@components";
 
-const page = () => {
+export default async function Home() {
+
   return (
     <main className='overflow-hidden'>
-       <Hero/>
-    </main>
-  )
-}
+      <Hero />
 
-export default page
+      <div className='mt-12 padding-x padding-y max-width' id='discover'>
+        <div className='home__text-container'>
+          <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
+          <p>Explore out cars you might like</p>
+        </div>
+      </div>
+    </main>
+  );
+}
