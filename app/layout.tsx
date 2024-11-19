@@ -1,8 +1,11 @@
 import React from 'react'
+import { Hero } from '@components'
 
 const layout = () => {
   return (
-    <div>layout</div>
+    <div>
+      <Hero/>
+    </div>
   )
 }
 
