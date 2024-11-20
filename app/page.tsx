@@ -13,7 +13,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="home__filters">
+      <div className="home__filters flex flex-col">
         <SearchBar />
 
         <div className="home__filter-container">
