@@ -1,4 +1,4 @@
-import {Hero } from "@components";
+import {CustomFilter, Hero, SearchBar } from "@components";
 
 export default async function Home() {
 
@@ -10,6 +10,15 @@ export default async function Home() {
         <div className='home__text-container'>
           <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
           <p>Explore out cars you might like</p>
+        </div>
+      </div>
+
+      <div className="home__filters flex flex-col">
+        <SearchBar />
+
+        <div className="home__filter-container">
+          <CustomFilter title="fuel"/>
+          <CustomFilter title="year"/>
         </div>
       </div>
     </main>
