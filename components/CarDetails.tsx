@@ -29,6 +29,15 @@ const CarDetails = ({isOpen, closeModal, car}): carDetailsProps => {
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
                 <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl bg-white text-left shadow-xsl transition-all flex flex-col gap-5">
                   <button
                     type="button"
@@ -54,9 +63,16 @@ const CarDetails = ({isOpen, closeModal, car}): carDetailsProps => {
                       <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
                         <Image src="/hero.png" alt="car-model" fill priority className='object-contain' />
                       </div>
+                      <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
+                        <Image src="/hero.png" alt="car-model" fill priority className='object-contain' />
+                      </div>
+                      <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
+                        <Image src="/hero.png" alt="car-model" fill priority className='object-contain' />
+                      </div>
                     </div>
                   </div>
                 </Dialog.Panel>
+              </Transition.Child>
             </div>
           </div>
         </Dialog>
