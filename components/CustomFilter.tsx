@@ -26,6 +26,28 @@ const CustomFilter = ({title, options}: CustomFilterProps) => {
               alt="chevron up down"
             />
           </Listbox.Button>
+          <Transition
+            as={Fragment}
+            leave="transition ease-in duration-100"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <Listbox.Options className="custom-filter__options">
+              {options.map((option) =>
+                <Listbox.Option
+                  key={option.title}
+                  value={option}
+                  className={({active}) => `relative cursor-default select-none py-2 px-4 ${active ? "bg-primary-blue-100 text-white" : "text-gray-900"}`}
+                >
+                  {({selected}) =>
+                    <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
+                      {option.title}
+                    </span>
+                  }
+                </Listbox.Option>
+              )}
+            </Listbox.Options>
+          </Transition>
         </div>
       </Listbox>
     </div>
