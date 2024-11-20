@@ -23,7 +23,7 @@ export async function fetchCars(filters: FilterProps) {
   
     return result;
   }
-  
+
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
     const basePricePerDay = 50; // Base rental price per day in dollars
@@ -56,3 +56,5 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   
     return `${url}`;
   }
+
+  
