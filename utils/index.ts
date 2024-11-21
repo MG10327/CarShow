@@ -6,7 +6,7 @@ export async function fetchCars(filters: FilterProps) {
   
     // Set the required headers for the API request
     const headers: HeadersInit = {
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY || "",
+      "X-RapidAPI-Key": 'd847eeabebmsh8dd2ceb29fd1b78p1350ffjsnde203ac66ef2', // NOT ideal but figuring out production vercel issues for now.
       "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
     };
   
