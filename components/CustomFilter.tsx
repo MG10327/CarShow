@@ -5,9 +5,32 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { Listbox, Transition } from '@headlessui/react'
 import { CustomFilterProps } from '@types'
+import { useSearchParams } from 'next/navigation'
 
 const CustomFilter = ({title, options}: CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0])
+  const router = useRouter()
+
+  const handleUpdateParams = (type: string, value: string) => {
+    const newPathName = ""
+
+    const searchParams = new URLSearchParams(window.location.search)
+    // Update or delete the 'model' search parameter based on the 'model' value
+    if (model) {
+      searchParams.set("model", model);
+    } else {
+      searchParams.delete("model");
+    }
+
+    // Update or delete the 'manufacturer' search parameter based on the 'manufacturer' value
+    if (manufacturer) {
+      searchParams.set("manufacturer", manufacturer);
+    } else {
+       searchParams.delete("manufacturer");
+    }
+
+    router.push(newPathName)
+  }
 
   return (
     <div className='w-fit'>
